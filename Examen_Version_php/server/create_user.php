@@ -5,8 +5,8 @@ $con = new ConectorBD('localhost', 'root', '');
 if ($con -> initConexion('agenda') == 'OK') {
 	for ($i = 1; $i <= 3; $i++) {
 		$datos['nombre'] = "Nombre de usuario " . $i;
-		$datos['email'] = "user" . $i . "@gmail.com";
-		$datos['pass'] = password_hash("claveuser" . $i, PASSWORD_DEFAULT);
+		$datos['email'] = "usuario" . $i . "@gmail.com";
+		$datos['pass'] = password_hash("usuario" . $i, PASSWORD_DEFAULT);
 		$datos['nacimiento'] = date('Y-m-d');
 		if ($con -> insertData('Usuarios', $datos))
 			echo "Se insertaron los datos correctamente del usuario " . $i . "<br/>";

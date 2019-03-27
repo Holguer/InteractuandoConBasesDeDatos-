@@ -1,4 +1,4 @@
 credenciales usuarios:
-user1@gmail.com   pass: claveuser1
-user2@gmail.com   pass: claveuser2
-user3@gmail.com   pass: claveuser3
+usuario1@gmail.com   pass: usuario1
+usuario2@gmail.com   pass: usuario2
+usuario3@gmail.com   pass: usuario3

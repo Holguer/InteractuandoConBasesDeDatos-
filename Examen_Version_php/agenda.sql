@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 08-01-2018 a las 16:57:23
+-- Tiempo de generación: 26-03-2019 a las 23:45:34
 -- Versión del servidor: 5.7.19
 -- Versión de PHP: 5.6.31
 
@@ -40,15 +40,14 @@ CREATE TABLE IF NOT EXISTS `eventos` (
   `Usuarios_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_Eventos_Usuarios_idx` (`Usuarios_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `eventos`
 --
 
 INSERT INTO `eventos` (`id`, `titulo`, `fecha_ini`, `hora_ini`, `fecha_fin`, `hora_fin`, `dia_completo`, `Usuarios_id`) VALUES
-(6, 'evento2', '2018-01-17', '07:00:00', '2018-01-19', '09:00:00', 0, 10),
-(5, 'evento1', '2018-01-09', '07:00:00', '2018-01-11', '09:00:00', 0, 10);
+(9, 'evento1', '2018-01-18', '07:00:00', '2018-01-20', '07:30:00', 0, 10);
 
 -- --------------------------------------------------------
 
@@ -65,16 +64,16 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `nacimiento` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `email`, `pass`, `nacimiento`) VALUES
-(10, 'Nombre de usuario 1', 'user1@gmail.com', '$2y$10$AA4/yvffZlqqRRJzx6QSZeexeKK0socq22ZXXE.V/P01IAwgEO6qC', '2018-01-07'),
-(11, 'Nombre de usuario 2', 'user2@gmail.com', '$2y$10$1yJhE/RXTjkTdUQps/H3WOeJl5mRkZOTsEBfTLWG.dndv9UczPyjW', '2018-01-07'),
-(12, 'Nombre de usuario 3', 'user3@gmail.com', '$2y$10$KdaqmL/fCiOAynTL95vjPeOD7fPKMoKFmDxsa21IAajW58Xkc/wdC', '2018-01-07');
+(13, 'Nombre de usuario 1', 'usuario1@gmail.com', '$2y$10$fB1anrEyW9wFbiNmCAA4E.GbG9ugta3OYBvn45i5ZWOgwnJbEg4Qq', '2019-03-26'),
+(14, 'Nombre de usuario 2', 'usuario2@gmail.com', '$2y$10$GiDs94dBZkbWPySzQWS56OG3GQPMsmoGzsRPJ5vPhdNihRLsUZIH2', '2019-03-26'),
+(15, 'Nombre de usuario 3', 'usuario3@gmail.com', '$2y$10$wYD2zUyGQWPwwbH7JrFxu.nP1B0s0E8g5PcGzteunNwXMPz/zNdQy', '2019-03-26');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
