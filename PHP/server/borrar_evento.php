@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['isLogin']) {
-	require ('conectorBD.php');
+	require ('conexion.php');
 
 	$con = new ConectorBD('localhost', 'root', '');
 	$response['conexion'] = $con -> initConexion('agenda');

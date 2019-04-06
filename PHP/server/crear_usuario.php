@@ -1,5 +1,5 @@
 <?php
-require ('conectorBD.php');
+require ('conexion.php');
 
 $con = new ConectorBD('localhost', 'root', '');
 if ($con -> initConexion('agenda') == 'OK') {

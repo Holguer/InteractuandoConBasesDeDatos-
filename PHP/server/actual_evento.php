@@ -8,7 +8,7 @@ function validateDate($date, $format = 'Y-m-d H:i:s')
 
 session_start();
 if ($_SESSION['isLogin']) {
-	require ('conectorBD.php');
+	require ('conexion.php');
 
 	$con = new ConectorBD('localhost', 'root', '');
 	$response['conexion'] = $con -> initConexion('agenda');

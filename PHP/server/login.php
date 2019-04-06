@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require ('conectorBD.php');
+require ('conexion.php');
 
 $pass = $_POST['password'];
 $response['conexion'] = 'Sin conexión';
